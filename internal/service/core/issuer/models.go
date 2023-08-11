@@ -39,9 +39,9 @@ func (ipn IdentityProviderName) String() string {
 }
 
 const (
-	UnstoppableDomainsProviderName IdentityProviderName = "Unstoppable Domains"
+	UnstoppableDomainsProviderName IdentityProviderName = "UnstoppableDomains"
 	CivicProviderName              IdentityProviderName = "Civic"
-	GitcoinProviderName            IdentityProviderName = "Gitcoin Passport"
+	GitcoinProviderName            IdentityProviderName = "GitcoinPassport"
 	WorldCoinProviderName          IdentityProviderName = "Worldcoin"
 )
 
