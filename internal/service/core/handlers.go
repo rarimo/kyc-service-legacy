@@ -39,7 +39,7 @@ func (k *kycService) NewVerifyRequest(req *requests.VerifyRequest) (*data.User, 
 		}
 
 		// "1" == true
-		credentialSubject.IsNatural = "1"
+		credentialSubject.IsNatural = 1
 		if newUser.Status == data.UserStatusVerified {
 			_, err := k.issuer.IssueClaim(
 				newUser.IdentityID.ID,
