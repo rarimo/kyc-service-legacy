@@ -62,14 +62,15 @@ func (w *Worldcoin) Verify(
 	// as we don't have the user's eth address, we set it to the zero address
 	user.EthAddress = nil
 
-	return &issuer.IdentityProvidersCredentialSubject{
-			Provider:          issuer.WorldCoinProviderName,
-			WorldCoinScore:    likelyHumanStrong,
-			KYCAdditionalData: string(userInfoRaw),
-		}, crypto.Keccak256(
-			[]byte(userInfo.Sub),
-			providers.WorldCoinIdentityProvider.Bytes(),
-		), nil
+	credentialSubject := issuer.NewEmptyIdentityProvidersCredentialSubject()
+	credentialSubject.Provider = issuer.WorldCoinProviderName
+	credentialSubject.WorldCoinScore = likelyHumanStrong
+	credentialSubject.KYCAdditionalData = string(userInfoRaw)
+
+	return credentialSubject, crypto.Keccak256(
+		[]byte(userInfo.Sub),
+		providers.WorldCoinIdentityProvider.Bytes(),
+	), nil
 }
 
 // retrieveUserInfo retrieves the user's info from the Worldcoin API

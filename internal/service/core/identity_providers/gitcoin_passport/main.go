@@ -89,7 +89,7 @@ func (g *GitcoinPassport) Verify(
 	user.Status = data.UserStatusPending
 	user.EthAddress = &userAddr
 
-	var creds *issuer.IdentityProvidersCredentialSubject
+	credentialSubject := issuer.NewEmptyIdentityProvidersCredentialSubject()
 
 	switch response.Status {
 	case statusDone:
@@ -114,19 +114,18 @@ func (g *GitcoinPassport) Verify(
 		user.ProviderData = providerDataRaw
 		user.Status = data.UserStatusVerified
 
-		creds = &issuer.IdentityProvidersCredentialSubject{
-			Provider:             issuer.GitcoinProviderName,
-			Address:              userAddr.String(),
-			GitcoinPassportScore: response.Score,
-			KYCAdditionalData:    string(providerDataRaw),
-		}
+		credentialSubject.Provider = issuer.GitcoinProviderName
+		credentialSubject.Address = userAddr.String()
+		credentialSubject.GitcoinPassportScore = response.Score
+		credentialSubject.KYCAdditionalData = string(providerDataRaw)
+
 	case statusProcessing:
 		g.scoreReqChan <- *user
 	default:
 		return nil, nil, errors.Wrapf(ErrUnexpectedStatus, response.Status)
 	}
 
-	return creds, cryptoPkg.Keccak256(
+	return credentialSubject, cryptoPkg.Keccak256(
 		userAddr.Bytes(),
 		providers.GitCoinPassportIdentityProvider.Bytes(),
 	), nil
@@ -178,17 +177,17 @@ func (g *GitcoinPassport) watchNewCheckScoreRequest(ctx context.Context) {
 					return
 				}
 
+				credentialSubject := issuer.NewEmptyIdentityProvidersCredentialSubject()
+				credentialSubject.IsNatural = 1
+				credentialSubject.Provider = issuer.GitcoinProviderName
+				credentialSubject.Address = user.EthAddress.String()
+				credentialSubject.GitcoinPassportScore = score
+				credentialSubject.KYCAdditionalData = string(user.ProviderData)
+
 				if _, err := g.issuer.IssueClaim(
 					user.IdentityID.ID,
 					issuer.ClaimTypeIdentityProviders,
-					// "1" == true
-					issuer.IdentityProvidersCredentialSubject{
-						IsNatural:            "1",
-						Provider:             issuer.GitcoinProviderName,
-						Address:              user.EthAddress.String(),
-						GitcoinPassportScore: score,
-						KYCAdditionalData:    string(user.ProviderData),
-					},
+					credentialSubject,
 				); err != nil {
 					g.logger.WithError(err).Error("failed to issue claim")
 				}

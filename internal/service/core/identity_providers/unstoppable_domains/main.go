@@ -71,14 +71,15 @@ func (u *UnstoppableDomains) Verify(
 	user.Status = data.UserStatusVerified
 	user.ProviderData = domainInfoRaw
 
-	return &issuer.IdentityProvidersCredentialSubject{
-			Provider:          issuer.UnstoppableDomainsProviderName,
-			Address:           userInfo.WalletAddress,
-			UnstoppableDomain: userInfo.Domain,
-		}, cryptoPkg.Keccak256(
-			[]byte(userInfo.Domain),
-			providers.UnstoppableDomainsIdentityProvider.Bytes(),
-		), nil
+	credentialSubject := issuer.NewEmptyIdentityProvidersCredentialSubject()
+	credentialSubject.Provider = issuer.UnstoppableDomainsProviderName
+	credentialSubject.Address = userInfo.WalletAddress
+	credentialSubject.UnstoppableDomain = userInfo.Domain
+
+	return credentialSubject, cryptoPkg.Keccak256(
+		[]byte(userInfo.Domain),
+		providers.UnstoppableDomainsIdentityProvider.Bytes(),
+	), nil
 }
 
 func (u *UnstoppableDomains) retrieveUserInfo(accessToken string) (*UserInfo, error) {

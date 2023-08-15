@@ -76,14 +76,15 @@ func (c *Civic) Verify(
 	user.Status = data.UserStatusVerified
 	user.ProviderData = providerDataRaw
 
-	return &issuer.IdentityProvidersCredentialSubject{
-			Provider:                 issuer.CivicProviderName,
-			Address:                  verifyData.Address.String(),
-			CivicGatekeeperNetworkID: token.String(),
-		}, cryptoPkg.Keccak256(
-			verifyData.Address.Bytes(),
-			providers.CivicIdentityProvider.Bytes(),
-		), nil
+	credentialSubject := issuer.NewEmptyIdentityProvidersCredentialSubject()
+	credentialSubject.Provider = issuer.CivicProviderName
+	credentialSubject.Address = verifyData.Address.String()
+	credentialSubject.CivicGatekeeperNetworkID = token.Int64()
+
+	return credentialSubject, cryptoPkg.Keccak256(
+		verifyData.Address.Bytes(),
+		providers.CivicIdentityProvider.Bytes(),
+	), nil
 }
 
 func (c *Civic) verifySignature(verifyData VerificationData, userAddress common.Address) error {
