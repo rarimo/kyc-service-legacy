@@ -39,14 +39,14 @@ func Verify(w http.ResponseWriter, r *http.Request) {
 		errors.Is(err, core.ErrUserAlreadyVerifiedByIdentityID),
 		errors.Is(err, core.ErrDuplicatedProviderData):
 		Log(r).WithField("reason", err).Debug("Conflict")
-		ape.RenderErr(w, problems.Conflict())
+		ape.RenderErr(w, responses.Conflict(errors.Cause(err).Error()))
 		return
 	case isUnauthorizedError(err):
 		Log(r).WithField("reason", err).
 			WithField("identity-provider", req.IdentityProviderName).
 			WithField("provider-data", string(req.ProviderData)).
 			Debug("Unauthorized")
-		ape.RenderErr(w, problems.Unauthorized())
+		ape.RenderErr(w, responses.Unauthorized(errors.Cause(err).Error()))
 		return
 	case err != nil:
 		Log(r).WithError(err).

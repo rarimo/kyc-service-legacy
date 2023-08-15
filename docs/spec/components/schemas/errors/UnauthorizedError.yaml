@@ -1,0 +1,40 @@
+type: object
+required:
+  - title
+  - status
+  - code
+properties:
+  title:
+    type: string
+    description: "Short, human-readable summary of the problem"
+    example: "Unauthorized"
+  detail:
+    type: string
+    description: "Human-readable explanation specific to this occurrence of the problem"
+    example: "invalid access token"
+  status:
+    type: integer
+    description: "HTTP status code applicable to this problem"
+    enum:
+      - 401
+  code:
+    type: string
+    description: |-
+      Application-specific error code, expressed as a string value
+      
+      - invalid_access_token error - 1
+      - invalid_signature - 2
+      - nonce_not_found - 3
+      - not_likely_human - 4
+      - score_too_low - 5
+      - invalid_gateway_token - 6
+    enum:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+      - "6"
+  meta:
+    type: object
+    description: "Object containing non-standard meta-information about the error"

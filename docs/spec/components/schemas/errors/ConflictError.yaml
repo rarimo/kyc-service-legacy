@@ -1,0 +1,34 @@
+type: object
+required:
+  - title
+  - status
+  - code
+properties:
+  title:
+    type: string
+    description: "Short, human-readable summary of the problem"
+    example: "Conflict"
+  detail:
+    type: string
+    description: "Human-readable explanation specific to this occurrence of the problem"
+    example: "invalid access token"
+  status:
+    type: integer
+    description: "HTTP status code applicable to this problem"
+    enum:
+      - 401
+  code:
+    type: string
+    description: |-
+      Application-specific error code, expressed as a string value
+      
+      - eth_address_taken - 1
+      - identity_verified - 2
+      - duplicate_provider_data - 3
+    enum:
+      - "1"
+      - "2"
+      - "3"
+  meta:
+    type: object
+    description: "Object containing non-standard meta-information about the error"
