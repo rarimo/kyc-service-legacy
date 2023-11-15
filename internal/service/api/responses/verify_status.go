@@ -1,8 +1,8 @@
 package responses
 
 import (
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
-	"gitlab.com/rarimo/identity/kyc-service/resources"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
+	"github.com/rarimo/kyc-service-legacy/resources"
 )
 
 func NewVerifyStatus(user *data.User) resources.VerifyStatusRequest {

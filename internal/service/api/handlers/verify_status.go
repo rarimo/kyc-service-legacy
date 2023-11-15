@@ -2,14 +2,14 @@ package handlers
 
 import (
 	"errors"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core"
 	"net/http"
 
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/requests"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/responses"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/requests"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/responses"
 )
 
 func GetVerifyStatus(w http.ResponseWriter, r *http.Request) {

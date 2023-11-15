@@ -9,8 +9,8 @@ import (
 	"gitlab.com/distributed_lab/logan/v3"
 	"gitlab.com/distributed_lab/logan/v3/errors"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core"
 )
 
 type service struct {

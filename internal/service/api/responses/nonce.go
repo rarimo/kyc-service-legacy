@@ -1,8 +1,8 @@
 package responses
 
 import (
-	"gitlab.com/rarimo/identity/kyc-service/internal/crypto"
-	"gitlab.com/rarimo/identity/kyc-service/resources"
+	"github.com/rarimo/kyc-service-legacy/internal/crypto"
+	"github.com/rarimo/kyc-service-legacy/resources"
 )
 
 func NewNonce(nonce string) resources.NewNonceResponse {

@@ -4,8 +4,8 @@ import (
 	migrate "github.com/rubenv/sql-migrate"
 	"gitlab.com/distributed_lab/logan/v3/errors"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/assets"
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/assets"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
 )
 
 var migrations = &migrate.EmbedFileSystemMigrationSource{

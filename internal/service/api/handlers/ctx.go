@@ -6,7 +6,7 @@ import (
 
 	"gitlab.com/distributed_lab/logan/v3"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core"
 )
 
 type ctxKey int

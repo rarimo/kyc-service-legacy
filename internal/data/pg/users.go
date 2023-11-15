@@ -11,7 +11,7 @@ import (
 	sq "github.com/Masterminds/squirrel"
 	"github.com/ethereum/go-ethereum/common"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
 )
 
 type usersQ struct {

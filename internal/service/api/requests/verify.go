@@ -10,8 +10,8 @@ import (
 	iden3core "github.com/iden3/go-iden3-core"
 	"github.com/pkg/errors"
 
-	providers "gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers"
-	"gitlab.com/rarimo/identity/kyc-service/resources"
+	providers "github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers"
+	"github.com/rarimo/kyc-service-legacy/resources"
 )
 
 type VerifyRequest struct {

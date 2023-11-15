@@ -6,10 +6,10 @@ import (
 	"github.com/google/uuid"
 	"github.com/pkg/errors"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/crypto"
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/requests"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/issuer"
+	"github.com/rarimo/kyc-service-legacy/internal/crypto"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/requests"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/issuer"
 )
 
 func (k *kycService) NewVerifyRequest(req *requests.VerifyRequest) (*data.User, error) {

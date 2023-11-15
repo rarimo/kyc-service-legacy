@@ -255,6 +255,9 @@ github.com/quic-go/quic-go/internal/utils/linkedlist
 github.com/quic-go/quic-go/internal/wire
 github.com/quic-go/quic-go/logging
 github.com/quic-go/quic-go/quicvarint
+# github.com/rarimo/issuer v0.1.0
+## explicit; go 1.19
+github.com/rarimo/issuer/resources
 # github.com/refraction-networking/utls v1.3.2
 ## explicit; go 1.19
 github.com/refraction-networking/utls

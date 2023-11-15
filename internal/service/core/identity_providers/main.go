@@ -1,8 +1,8 @@
 package identityproviders
 
 import (
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/issuer"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/issuer"
 )
 
 type IdentityProvider interface {

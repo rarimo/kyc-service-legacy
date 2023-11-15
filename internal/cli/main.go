@@ -2,7 +2,7 @@ package cli
 
 import (
 	"context"
-	nonceCleaner "gitlab.com/rarimo/identity/kyc-service/internal/service/nonce_cleaner"
+	nonceCleaner "github.com/rarimo/kyc-service-legacy/internal/service/nonce_cleaner"
 	"os"
 	"os/signal"
 	"sync"
@@ -12,8 +12,8 @@ import (
 	"gitlab.com/distributed_lab/kit/kv"
 	"gitlab.com/distributed_lab/logan/v3"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api"
 )
 
 func Run(args []string) bool {

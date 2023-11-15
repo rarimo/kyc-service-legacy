@@ -7,15 +7,15 @@ import (
 	"gitlab.com/distributed_lab/ape"
 	"gitlab.com/distributed_lab/ape/problems"
 
-	providers "gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers/civic"
-	gcpsp "gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers/gitcoin_passport"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers/worldcoin"
+	providers "github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers/civic"
+	gcpsp "github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers/gitcoin_passport"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers/worldcoin"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/requests"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/responses"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/requests"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/responses"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core"
 )
 
 func Verify(w http.ResponseWriter, r *http.Request) {

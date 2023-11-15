@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
-	"gitlab.com/rarimo/identity/kyc-service/internal/data/pg"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/data/pg"
 
 	"gitlab.com/distributed_lab/logan/v3"
 	"gitlab.com/distributed_lab/running"

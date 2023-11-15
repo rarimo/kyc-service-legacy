@@ -1,4 +1,4 @@
-module gitlab.com/rarimo/identity/kyc-service
+module github.com/rarimo/kyc-service-legacy
 
 go 1.19
 
@@ -9,10 +9,12 @@ require (
 	github.com/fatih/structs v1.1.0
 	github.com/go-chi/chi v4.1.2+incompatible
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
+	github.com/google/jsonapi v1.0.0
 	github.com/google/uuid v1.3.0
 	github.com/iden3/go-iden3-core v1.0.2
 	github.com/imroc/req/v3 v3.37.1
 	github.com/pkg/errors v0.9.1
+	github.com/rarimo/issuer v0.1.0
 	github.com/rubenv/sql-migrate v1.5.1
 	gitlab.com/distributed_lab/ape v1.7.1
 	gitlab.com/distributed_lab/figure v2.1.0+incompatible
@@ -41,7 +43,6 @@ require (
 	github.com/go-stack/stack v1.8.1 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
 	github.com/golang/mock v1.6.0 // indirect
-	github.com/google/jsonapi v1.0.0 // indirect
 	github.com/google/pprof v0.0.0-20230602150820-91b7bce49751 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect

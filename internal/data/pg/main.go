@@ -3,7 +3,7 @@ package pg
 import (
 	"gitlab.com/distributed_lab/kit/pgdb"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
 )
 
 const (

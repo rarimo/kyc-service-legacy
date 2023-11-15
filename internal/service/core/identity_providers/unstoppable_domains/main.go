@@ -6,17 +6,17 @@ import (
 
 	cryptoPkg "github.com/ethereum/go-ethereum/crypto"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/crypto"
-	providers "gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/issuer"
+	"github.com/rarimo/kyc-service-legacy/internal/crypto"
+	providers "github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/issuer"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/imroc/req/v3"
 	"github.com/pkg/errors"
 	"gitlab.com/distributed_lab/logan/v3"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
 )
 
 type UnstoppableDomains struct {

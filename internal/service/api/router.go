@@ -6,8 +6,8 @@ import (
 	"github.com/go-chi/chi"
 	"gitlab.com/distributed_lab/ape"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/handlers"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/requests"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/handlers"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/requests"
 )
 
 func (s *service) router() chi.Router {

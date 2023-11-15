@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/cli"
+	"github.com/rarimo/kyc-service-legacy/internal/cli"
 )
 
 func main() {

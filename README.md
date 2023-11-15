@@ -15,7 +15,7 @@ Integrated identity provider:
 ## Install
 
   ```
-  git clone gitlab.com/rarimo/identity/kyc-service
+  git clone github.com/rarimo/kyc-service-legacy
   cd kyc-service
   go build main.go
   export KV_VIPER_FILE=./config.yaml
@@ -47,8 +47,8 @@ Make sure that docker installed.
 use `docker run ` with `-p 8080:80` to expose port 80 to 8080
 
   ```
-  docker build -t gitlab.com/rarimo/identity/kyc-service .
-  docker run -e KV_VIPER_FILE=/config.yaml gitlab.com/rarimo/identity/kyc-service
+  docker build -t github.com/rarimo/kyc-service-legacy .
+  docker run -e KV_VIPER_FILE=/config.yaml github.com/rarimo/kyc-service-legacy
   ```
 
 ## Running from Source

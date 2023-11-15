@@ -4,19 +4,19 @@ import (
 	"context"
 	"time"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers/civic"
-	gcpsp "gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers/gitcoin_passport"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers/worldcoin"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers/civic"
+	gcpsp "github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers/gitcoin_passport"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers/worldcoin"
 
 	"github.com/pkg/errors"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
-	"gitlab.com/rarimo/identity/kyc-service/internal/data"
-	"gitlab.com/rarimo/identity/kyc-service/internal/data/pg"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/requests"
-	providers "gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers"
-	unstopdom "gitlab.com/rarimo/identity/kyc-service/internal/service/core/identity_providers/unstoppable_domains"
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/core/issuer"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/data"
+	"github.com/rarimo/kyc-service-legacy/internal/data/pg"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/requests"
+	providers "github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers"
+	unstopdom "github.com/rarimo/kyc-service-legacy/internal/service/core/identity_providers/unstoppable_domains"
+	"github.com/rarimo/kyc-service-legacy/internal/service/core/issuer"
 )
 
 type KYCService interface {

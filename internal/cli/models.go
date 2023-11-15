@@ -2,7 +2,7 @@ package cli
 
 import (
 	"context"
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
 )
 
 type (

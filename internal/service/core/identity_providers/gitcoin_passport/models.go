@@ -7,8 +7,8 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"gitlab.com/distributed_lab/logan/v3/errors"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/service/api/requests"
-	"gitlab.com/rarimo/identity/kyc-service/resources"
+	"github.com/rarimo/kyc-service-legacy/internal/service/api/requests"
+	"github.com/rarimo/kyc-service-legacy/resources"
 )
 
 const (

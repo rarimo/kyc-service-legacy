@@ -6,10 +6,10 @@ import (
 	iden3core "github.com/iden3/go-iden3-core"
 	"github.com/imroc/req/v3"
 	"github.com/pkg/errors"
+	"github.com/rarimo/issuer/resources"
 	"gitlab.com/distributed_lab/logan/v3"
-	"gitlab.com/rarimo/identity/issuer/resources"
 
-	"gitlab.com/rarimo/identity/kyc-service/internal/config"
+	"github.com/rarimo/kyc-service-legacy/internal/config"
 )
 
 type Issuer interface {
