@@ -484,8 +484,6 @@ gitlab.com/distributed_lab/lorem v0.2.1/go.mod h1:wkzrGoB1L/yUBu56SfoJ/vNiPqiHZc
 gitlab.com/distributed_lab/running v0.0.0-20200706131153-4af0e83eb96c/go.mod h1:4TnADX84dQjQMRHKIMPCVL0L97rD/Jxv0xDbrN6aKzk=
 gitlab.com/distributed_lab/running v1.6.0 h1:O2GQHgYkpNRDbobR11atOCH2rhS1okNKyadiAqi+kQI=
 gitlab.com/distributed_lab/running v1.6.0/go.mod h1:4TnADX84dQjQMRHKIMPCVL0L97rD/Jxv0xDbrN6aKzk=
-gitlab.com/rarimo/identity/issuer v0.0.0-20230714110103-a853093c3233 h1:5dJhUij+k+igqKc/Se31baQyR5sp7Vk9ie2PaoiWESI=
-gitlab.com/rarimo/identity/issuer v0.0.0-20230714110103-a853093c3233/go.mod h1:qo0NXd72v5jkNX/4UDYhc/xexCGGeACoL/5qaK/m7kM=
 go.opencensus.io v0.21.0/go.mod h1:mSImk1erAIZhrmZN+AvHh14ztQfjbGwt4TtuofqLduU=
 go.opencensus.io v0.22.0/go.mod h1:+kGneAE2xo2IficOXnaByMWTGM9T73dGwxeWcUqIpI8=
 go.opencensus.io v0.22.2/go.mod h1:yxeiOL68Rb0Xd1ddK5vPZ/oVn4vY4Ynel7k9FzqtOIw=
